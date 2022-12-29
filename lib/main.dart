@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:login_app/screen/AuthorCrud.dart';
+import 'package:login_app/screen/AuthorPage.dart';
 import 'package:login_app/screen/Homepage.dart';
-import 'package:login_app/screen/Login.dart';
-import 'package:login_app/screen/SplashScreen.dart';
 
 void main() async{
 
@@ -13,9 +13,9 @@ void main() async{
     MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context)=> const SplashScreenPage(),
-        'login_page': (context)=> const LoginPage(),
-        'homepage': (context)=> const Homepage(),
+        '/':(context) => const Homepage(),
+        'author_page':(context) => const AuthorPage(),
+        'author_crud':(context) => const AuthorCrud(),
       },
     )
   );

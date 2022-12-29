@@ -38,8 +38,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts:
   firebase_core:
-  firebase_auth:
-  google_sign_in:
+  cloud_firestore:
+  dotted_border:
+  image_picker:
+  flutter_image_compress:
 
 dev_dependencies:
   flutter_test:

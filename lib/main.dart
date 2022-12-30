@@ -1,7 +1,7 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:note_keeper/screen/authorpage.dart';
+import 'package:note_keeper/screen/SplashScreen.dart';
 import 'package:note_keeper/screen/homepage.dart';
 
 void main() async{
@@ -12,9 +12,10 @@ void main() async{
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(useMaterial3: true),
       routes: {
-        '/': (context) => const Homepage(),
-        'author_page': (context) => const AuthorPage(),
+        '/': (context) => const SplashScreen(),
+        'homepage': (context) => const Homepage(),
       },
     )
   );

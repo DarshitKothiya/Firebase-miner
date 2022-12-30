@@ -8,25 +8,25 @@ class FireStoreHelper{
 
   static final FirebaseFirestore fireStore = FirebaseFirestore.instance;
 
-  Stream<QuerySnapshot> fetchAuthorData() {
-    return fireStore.collection('author').snapshots();
+  Stream<QuerySnapshot> fetchNoteData() {
+    return fireStore.collection('note').snapshots();
   }
 
-  Future<DocumentReference> insertAuthorData(
+  Future<DocumentReference> insertNoteData(
       {required Map<String, dynamic> data}) async {
     DocumentReference<Map<String, dynamic>> documentReference = await fireStore
-        .collection('author').add(data);
+        .collection('note').add(data);
 
     return documentReference;
   }
 
-  Future<void> updateAuthorData(
+  Future<void> updateNoteData(
       {required Map<String, dynamic> data, required String id}) async {
-    await fireStore.collection('author').doc(id).update(data);
+    await fireStore.collection('note').doc(id).update(data);
   }
 
-  Future<void> deleteAuthorData({required String id}) async {
-    await fireStore.collection('author').doc(id).delete();
+  Future<void> deleteNoteData({required String id}) async {
+    await fireStore.collection('note').doc(id).delete();
   }
 
 
